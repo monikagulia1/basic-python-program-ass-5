@@ -1,0 +1,106 @@
+1. Write a Python Program to Find LCM?
+1. Python Program to Find LCM (Least Common Multiple):
+```python
+def find_lcm(x, y):
+    # Find the greater number
+    if x > y:
+        greater = x
+    else:
+        greater = y
+
+    while True:
+        if greater % x == 0 and greater % y == 0:
+            lcm = greater
+            break
+        greater += 1
+
+    return lcm
+
+num1 = int(input("Enter first number: "))
+num2 = int(input("Enter second number: "))
+
+lcm = find_lcm(num1, num2)
+print("LCM:", lcm)
+```
+2. Write a Python Program to Find HCF?
+2. Python Program to Find HCF (Highest Common Factor):
+```python
+def find_hcf(x, y):
+    while y:
+        x, y = y, x % y
+    return x
+
+num1 = int(input("Enter first number: "))
+num2 = int(input("Enter second number: "))
+
+hcf = find_hcf(num1, num2)
+print("HCF:", hcf)
+```
+3. Write a Python Program to Convert Decimal to Binary, Octal and Hexadecimal?
+3. Python Program to Convert Decimal to Binary, Octal, and Hexadecimal:
+```python
+decimal = int(input("Enter a decimal number: "))
+
+binary = bin(decimal)[2:]
+octal = oct(decimal)[2:]
+hexadecimal = hex(decimal)[2:]
+
+print("Binary:", binary)
+print("Octal:", octal)
+print("Hexadecimal:", hexadecimal)
+```
+4. Write a Python Program To Find ASCII value of a character?
+4. Python Program to Find the ASCII Value of a Character:
+```python
+char = input("Enter a character: ")
+
+ascii_value = ord(char)
+print("ASCII Value:", ascii_value)
+```
+5. Write a Python Program to Make a Simple Calculator with 4 basic mathematical operations?
+5. Python Program to Make a Simple Calculator with 4 Basic Mathematical Operations:
+```python
+def add(x, y):
+    return x + y
+
+def subtract(x, y):
+    return x - y
+
+def multiply(x, y):
+    return x * y
+
+def divide(x, y):
+    return x / y
+
+print("Select operation:")
+print("1. Addition")
+print("2. Subtraction")
+print("3. Multiplication")
+print("4. Division")
+
+choice = int(input("Enter choice (1/2/3/4): "))
+
+num1 = float(input("Enter first number: "))
+num2 = float(input("Enter second number: "))
+
+if choice == 1:
+    result = add(num1, num2)
+    operation = "+"
+elif choice == 2:
+    result = subtract(num1, num2)
+    operation = "-"
+elif choice == 3:
+    result = multiply(num1, num2)
+    operation = "*"
+elif choice == 4:
+    result = divide(num1, num2)
+    operation = "/"
+else:
+    print("Invalid choice")
+    exit()
+
+print(num1, operation, num2, "=", result)
+```
+
+In the last program, the user is prompted to select the desired operation and provide two numbers for the calculation. 
+The program then performs the selected operation (addition, subtraction, multiplication, or division) and prints the result.
